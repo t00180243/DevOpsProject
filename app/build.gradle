@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.application' //Plugin for application
 apply plugin: 'jacoco'
 apply plugin: 'com.github.kt3k.coveralls'
 
@@ -7,7 +7,7 @@ android {
     buildToolsVersion "27.0.3"
 
     defaultConfig {
-        applicationId "io.github.hidroh.calendar"
+        applicationId "com.github.devops.calendar"
         minSdkVersion 14
         targetSdkVersion 27
         versionCode 1
@@ -34,9 +34,6 @@ android {
         maxHeapSize = '2048m'
         maxParallelForks = 1
         forkEvery = 1
-        jacoco {
-            includeNoLocationClasses = true
-        }
     }
     testOptions.unitTests.includeAndroidResources true
 }
@@ -56,8 +53,8 @@ dependencies {
             "com.squareup.retrofit2:converter-gson:$retrofit2Version"
     testImplementation "org.robolectric:robolectric:$robolectricVersion",
             "org.robolectric:shadows-support-v4:$robolectricVersion",
-            'org.mockito:mockito-core:1.9.5+',
-            'junit:junit:4.12'
+            'org.mockito:mockito-core:1.9.5+', //Creating tests with Mockito
+            'junit:junit:4.12' //Creating tests with JUnit
     testImplementation("com.squareup.assertj:assertj-android:$assertjVersion") {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
