@@ -1,4 +1,4 @@
-#TravisCI details
+#TravisCI
 language: android
 sudo: false
 jdk: oraclejdk8
